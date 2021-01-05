@@ -2,7 +2,7 @@ import React from "react";
 import "./App.css";
 
 
-function ToDoForm(addTodo){
+function ToDoForm({addTodo}){
   const [value,setValue] = React.useState("");
 
   const handleSubmit = e => {
@@ -38,7 +38,7 @@ function App() {
     { text: "Meet friend for lunch" },
     { text: "Build really cool todo app" }
   ]);
-  
+
   const addTodo = text =>{
     const newTodos = [...todos, {text}];
     setTodos (newTodos);
@@ -54,7 +54,7 @@ function App() {
             todo={todo}
           />
         ))}
-        <ToDoForm addTodo = {addTodo}/>
+        <ToDoForm addTodo={addTodo}/>
       </div>
     </div>
   );
